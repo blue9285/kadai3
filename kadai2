@@ -23,3 +23,5 @@ done
 
 #Print result
 echo $m
+
+exit 0
