@@ -1,11 +1,11 @@
 #!/bin/bash
 
-while read i
+while read a
 do
-	for j in 'fgrep "$1 $2" answer.bash | awk '{print $3}''
+	for b in 'fgrep "$1 $2" answer.bash | awk '{print $3}''
 	do
-		echo -n $i
-		if [ $i -eq $j ]
+		echo -n $a
+		if [ $a -eq $b ]
 		then
 			echo ' is OK. '
 		else
