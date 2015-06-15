@@ -1,0 +1,6 @@
+language: generic
+script
+	- bash ./kadai2
+	- bash ./kadai2 15 3
+	- bash ./kadai2 20 5
+	- bash ./kadai2 25 5
