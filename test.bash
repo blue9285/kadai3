@@ -2,7 +2,7 @@
 
 while read i
 do
-	for j in 'fgrep "$1 $2" test.bash |awk '{print $3}''
+	for j in 'fgrep "$1 $2" answer.bash |awk '{print $3}''
 	do
 		echo -n $i
 		if [ $i -eq $j ]
