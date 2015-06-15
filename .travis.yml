@@ -1,6 +1,9 @@
 language: generic
 script:
 	- bash -e ./kadai2
-	- bash -e ./kadai2 15 3 = 3
-	- bash -e ./kadai2 20 5 = 5
-	- bash -e ./kadai2 25 5 = 5
+	- bash -e ./kadai2 15 3
+        - bash -e ./kadai2 15 3 | bash ./test.bash 15 3
+	- bash -e ./kadai2 20 5
+        - bash -e ./kadai2 20 5 | bash ./test.bash 20 5
+	- bash -e ./kadai2 25 5
+        - bash -e ./kadai2 25 5 | bash ./test.bash 25 5
