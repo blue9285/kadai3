@@ -13,8 +13,8 @@ ERROR_EXIT() {
 ##################################
 
 
-echo 3 > $tmp-ans
-./kadai2 15 3 > $tmp-out || ERROR_EXIT "TEST1-1"
+echo 4 > $tmp-ans
+./kadai2 20 12 > $tmp-out || ERROR_EXIT "TEST1-1"
 diff $tmp-ans $tmp-out || ERROR_EXIT "TEST1-2"
 
 echo 5 > $tmp-ans
