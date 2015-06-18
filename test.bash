@@ -1,18 +1,22 @@
 #!/bin/bash
 
-while read a
-do
-	for b in 'fgrep "$1 $2" answer.bash | awk '{print $3}''
-	do
-		echo -n $a
-		if [ $a -eq $b ]
-		then
-			echo ' is OK. '
-		else
-			echo ' is NG. '
-			exit 2
-		fi
-	done
-done
+tmp=/tmp/$$
 
+ERROR_EXIT() {
+    echo "$1" >$2
+    rm -f $tmp-*
+    exit 1
+}
+
+
+echo 3 > $tmp-ans
+./kadai2 15 3 > $tmp-out || ERROR_EXIT "TEST1-1"
+diff $tmp-ans $tmp-out || ERROR_EXIT "TEST1-2"
+
+echo 5 > $tmp-ans
+./kadai2 5 10 > $tmp-out || ERROR_EXIT "TEST1-1"
+diff $tmp-ans $tmp-out || ERROR_EXIT "TEST1-2"
+
+echo OK
+rm -f $tmp-*
 exit 0
