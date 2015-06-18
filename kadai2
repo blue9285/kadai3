@@ -22,4 +22,6 @@ do
 done
 
 #Print result
-echo $m
+echo "$m"
+
+exit 0
