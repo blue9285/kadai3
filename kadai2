@@ -1,7 +1,6 @@
 #!/bin/bash
 
-if [ $1 -lt $2 ];
-then
+if [ $1 -lt $2 ]; then
 	m=$2
 	n=$1
 else
@@ -14,8 +13,7 @@ fi
 #echo n = $n
 
 #Loop
-while [ $n -ne 0 ]
-do
+while [ $n -ne 0 ]; do
 	a='expr $m % $n'
 	m=$n
 	n=$a
